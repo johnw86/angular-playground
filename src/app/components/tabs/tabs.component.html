@@ -1,0 +1,11 @@
+<h2>Tabs</h2>
+
+<h3>Lazy load tabs</h3>
+
+<p>The idea behind the example is that initially only the default tab should be loaded, but once any other tabs are loaded they should stay active</p>
+
+<ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400">
+    <li *ngFor="let tab of tabs" class="me-2">
+        <a (onClick)="setTab(tab)" class="inline-block cursor-pointer p-4 rounded-t-lg hover:text-gray-600" [class.text-blue-600]="selectedTab == tab">{{tab.name}}</a>
+    </li>
+</ul>
